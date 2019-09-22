@@ -1,0 +1,62 @@
+.chat-bar.sticky-top {
+  top: 80px;
+}
+
+@media (max-device-width: 768px) {
+  .chat-bar.sticky-top {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-device-width: 768px) {
+  .chat-bar.sticky-top {
+    height: calc(100vh - 80px);
+  }
+}
+
+.chat-conversations {
+  overflow-y: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.chat,
+.empty-state {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.chat:first-child {
+  border-top: none;
+}
+
+.chat:last-child {
+  border-bottom: none;
+}
+
+.chat:hover {
+  text-decoration: none;
+  color: #007bff;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.chat:not(:last-child) {
+  border-bottom: none;
+}
+
+.chat-avatars {
+  flex-basis: 60px;
+}
+
+.chat-avatar-wrapper {
+  width: 8px;
+  overflow: visible;
+}
+
+.chat-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
